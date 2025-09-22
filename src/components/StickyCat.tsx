@@ -1,4 +1,3 @@
-import React from 'react';
 // Pastikan kamu sudah punya file running-cat.gif di folder assets
 import runningCat from '../assets/cats21.gif'; 
 

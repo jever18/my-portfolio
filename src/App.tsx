@@ -1,5 +1,4 @@
 // src/App.tsx
-import React from 'react';
 import Header from './components/Header.tsx';
 import HeroSection from './components/HeroSection.tsx';
 import About from './components/About.tsx'; // Import komponen About

@@ -1,4 +1,3 @@
-import React from 'react';
 import catIllustration from '../assets/cats.png';
 
 function HeroSection() {

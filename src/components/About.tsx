@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import catIllustration from '../assets/cats1.png'; // Pastikan sudah diimport
+import { useEffect, useRef } from "react";
+import catIllustration from "../assets/cats1.png";
 
 function About() {
   const sectionRef = useRef(null);
@@ -9,36 +9,43 @@ function About() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.querySelector('.cat-animation').classList.add('is-visible');
+            const catAnim = document.querySelector(".cat-animation");
+            if (catAnim) {
+              catAnim.classList.add("is-visible");
+            }
           }
         });
       },
-      { threshold: 0.5 } // Aktifkan saat 50% elemen terlihat
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
-
+  
   return (
     <section id="about" className="py-5" ref={sectionRef}>
       <div className="container-custom">
-        <h2 className="display-5 fw-bold text-center mb-4">Tentang <span className="text-gradient"> Saya</span></h2>
-        <p className="lead text-center text-body-secondary mx-auto" style={{ maxWidth: '700px' }}>
-	Halo! Nama saya [Jever Duly], seorang [Deplover pemula,Pengembang Web, Desainer UI/UX, dan sekaran masih freelancer]. Saya memiliki ketertarikan yang besar pada [Teknologi, dan menulis kode yang bersih,dan lagi membuat sebuah web sederhana dengan Termux].Saat ini, saya sedang mendalami [React.js dan Node.js,PHP, dan Laravel] dan membangun portofolio ini sebagai tempat untuk memamerkan proyek-proyek saya. Saya selalu terbuka untuk kolaborasi dan ide-ide baru.
+        <h2 className="display-5 fw-bold text-center mb-4">
+          Tentang <span className="text-primary">Saya</span>
+        </h2>
+        <p
+          className="lead text-center text-body-secondary mx-auto"
+          style={{ maxWidth: "600px" }}
+        >
+          Halo! Nama saya <strong>Jever Duly</strong>, seorang{" "}
+          <em>Developer Pemula</em> yang sedang belajar membangun website
+          interaktif dan modern.
         </p>
-        <img src={catIllustration} alt="Ilustrasi Kucing" className="cat-animation" />
+        <img
+          src={catIllustration}
+          alt="Ilustrasi Kucing"
+          className="cat-animation"
+        />
       </div>
     </section>
   );
 }
 
 export default About;
-

@@ -1,4 +1,3 @@
-import React from 'react';
 // Import gambar untuk proyek pertama
 import image1A from '../assets/1A.jpg';
 import image1B from '../assets/1B.jpg';
