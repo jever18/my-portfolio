@@ -87,19 +87,18 @@ body {
 }
 
 .cat-animation {
+  width: 150px;
   position: absolute;
-  right: -15px; /* Posisi di sisi kanan, 20px dari pinggir */
-  bottom: 215px; /* Sembunyikan di bawah */
-  opacity: 0;
-  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.8s ease-in;
-  z-index: -1;
-  width: 150px; /* Sesuaikan ukuran kucing */
+  bottom: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: transform 1s ease-out;
 }
 
 .cat-animation.is-visible {
-  transform: translateY(-150px); /* Geser ke atas sejauh 150px untuk muncul */
-  opacity: 1;
+  transform: translateX(0);
 }
+
 
 /* Penyesuaian untuk tampilan desktop agar kucing tidak meluber */
 @media (min-width: 768px) {

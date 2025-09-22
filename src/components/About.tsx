@@ -28,7 +28,7 @@ function About() {
     <section id="about" className="py-5" ref={sectionRef}>
       <div className="container-custom">
         <h2 className="display-5 fw-bold text-center mb-4">
-          Tentang <span className="text-primary">Saya</span>
+          Tentang <span className="text-gradient">Saya</span>
         </h2>
         <p
           className="lead text-center text-body-secondary mx-auto"
